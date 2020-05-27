@@ -5,7 +5,7 @@
         <hr class="my-4">
 
         <footer class="flex justify-between">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" class="w-10 rounded-full mr-2" alt="avatar">
+            <img src="{{$user->avatar}}" class="w-10 rounded-full mr-2" alt="avatar">
             <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white">Tweet-a-roo!</button>
         </footer>
 
