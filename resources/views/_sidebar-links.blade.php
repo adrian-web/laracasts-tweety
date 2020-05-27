@@ -1,4 +1,3 @@
-@auth
 <ul>
     <li>
         <a href="{{ route('home') }}" class="font-bold text-lg mb-4 block">Home</a>
@@ -11,4 +10,3 @@
         <a href="#" class="font-bold text-lg mb-4 block">More</a>
     </li>
 </ul>
-@endauth

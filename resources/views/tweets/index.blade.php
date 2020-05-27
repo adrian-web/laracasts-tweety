@@ -1,6 +1,7 @@
-@extends('layouts.app')
+<x-app>
+    <div>
+        @include('_publish-tweet-panel')
+        @include('_timeline')
+    </div>
 
-@section('content')
-@include('_publish-tweet-panel')
-@include('_timeline')
-@endsection
+</x-app>
