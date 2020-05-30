@@ -5,7 +5,7 @@
     <li class="mb-4">
         <div>
             <a href="{{ route('profile', $user) }}" class="flex items-center text-sm">
-                <img src="{{$user->avatar}}" class="w-10 rounded-full mr-2" alt="avatar">
+                <img src="{{ $user->avatar }}" class="w-10 rounded-full mr-2" alt="avatar">
 
                 {{$user->name}}
             </a>
