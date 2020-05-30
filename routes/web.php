@@ -21,6 +21,9 @@ Route::middleware('auth')->group(function() {
     Route::get('/tweets', 'TweetsController@index')->name('home');
     Route::post('/tweets', 'TweetsController@store');
 
+    Route::post('/tweets/{tweet}/like', 'TweetLikesController@store');
+    Route::delete('/tweets/{tweet}/like', 'TweetLikesController@destroy');
+
     Route::post('/profiles/{user:username}/follow', 'FollowsController@store')->name('follow');
     // Route::get('/profiles/{user:username}/edit', 'ProfilesController@edit');
     // below middleware method instead of authorize in controller
