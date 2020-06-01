@@ -31,7 +31,7 @@
                                 <div class="col-md-6">
                                     <input id="name" type="text"
                                         class="form-control @error('name') is-invalid @enderror" name="name"
-                                        value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                        value="{{ old('name') }}" required autocomplete="name">
 
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -75,13 +75,30 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-6">
+                            <div class="form-group row">
                                 <label for="password-confirm"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation" required autocomplete="new-password">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-6">
+                                <label for="description"
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
+
+                                <div class="col-md-6">
+                                    <textarea name="description" id="description"
+                                        class="form-control @error('description') is-invalid @enderror" required
+                                        cols="30" rows="10">{{ old('name') }}</textarea>
+
+                                    @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
 

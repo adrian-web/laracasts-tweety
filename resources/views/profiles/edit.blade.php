@@ -45,12 +45,26 @@
                 avatar
             </label>
             <div class="flex">
-                <input type="file" name="avatar" id="email" class="border border-gray-400 p-2 w-full">
-
+                <input type="file" name="avatar" id="avatar" class="border border-gray-400 p-2 w-full">
 
                 <img src="{{ $user->avatar }}" alt="avatar" style="width: 50px;">
             </div>
             @error('avatar')
+            <p class="text-red-500 text-xs mt-2">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+
+            <label for="banner" class="block mb-2 uppercase font-bold text-xs text-gray-700">
+                banner
+            </label>
+            <div class="flex">
+                <input type="file" name="banner" id="banner" class="border border-gray-400 p-2 w-full">
+
+                <img src="{{ $user->banner }}" alt="banner" style="width: 50px;">
+            </div>
+            @error('banner')
             <p class="text-red-500 text-xs mt-2">{{$message}}</p>
             @enderror
         </div>
@@ -75,6 +89,20 @@
                 class="border border-gray-400 p-2 w-full">
 
             @error('password_confirmation')
+            <p class="text-red-500 text-xs mt-2">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+            <label for="description" class="block mb-2 uppercase font-bold text-xs text-gray-700">
+                description
+            </label>
+            {{-- <input type="text" name="name" id="name" value="{{$user->name}}" required
+            class="border border-gray-400 p-2 w-full"> --}}
+            <textarea name="description" id="description" required class="border border-gray-400 p-2 w-full" cols="30"
+                rows="10">{{$user->description}}</textarea>
+
+            @error('description')
             <p class="text-red-500 text-xs mt-2">{{$message}}</p>
             @enderror
         </div>

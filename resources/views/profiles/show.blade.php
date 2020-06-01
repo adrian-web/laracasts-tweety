@@ -1,8 +1,9 @@
 <x-app>
     <header class="mb-6">
         <div class="relative">
-            <img src="/images/profile-banner.jpg" alt="banner" style="width: 700px; height: 223px"
-                class="mb-2 rounded-lg">
+            {{-- <img src="/images/profile-banner.jpg" alt="banner" style="width: 700px; height: 223px"
+                class="mb-2 rounded-lg"> --}}
+            <img src="{{ $user->banner }}" alt="banner" style="width: 700px; height: 223px" class="mb-2 rounded-lg">
             <img src="{{ $user->avatar }}"
                 class="absolute rounded-full bottom-0 transform -translate-x-1/2 translate-y-1/2" alt="avatar"
                 style="width: 150px; left: 50%;">
@@ -23,11 +24,12 @@
                 <x-follow-button :user="$user"></x-follow-button>
             </div>
         </div>
-        <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum asperiores, id minima ad
+        {{-- <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum asperiores, id minima ad
             velit commodi, similique esse facilis eaque expedita nam soluta fugit ut qui quis suscipit illum molestiae!
             Harum quis labore nihil vitae, commodi ad nisi ducimus! Aspernatur quidem possimus fugit fugiat ut dolorem
             enim
-            soluta dolor vero aliquid.</p>
+            soluta dolor vero aliquid.</p> --}}
+        <p class="text-sm">{{$user->description}}</p>
     </header>
     @include('_timeline', [
     'tweets' => $tweets

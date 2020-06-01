@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'name', 'email', 'avatar', 'password',
+        'username', 'name', 'email', 'avatar', 'banner', 'description', 'password',
     ];
 
     /**
@@ -43,7 +43,8 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($value);
     }
 
-    public function timeline(){
+    public function timeline()
+    {
         $friends = $this->follows()->pluck('id');
 
         return Tweet::whereIn('user_id', $friends)
@@ -55,12 +56,21 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        if ($value)
-        {
+        if ($value) {
             return asset('storage/' . $value);
         }
         
         return asset('/images/default-avatar.png');
+        // return asset($value);
+    }
+
+    public function getBannerAttribute($value)
+    {
+        if ($value) {
+            return asset('storage/' . $value);
+        }
+        
+        return asset('/images/default-banner.jpg');
         // return asset($value);
     }
 
