@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="http://unpkg.com/turbolinks"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -33,8 +34,8 @@
         {{$slot}}
     </div>
 
+    <script src="{{asset('js/count.js')}}"></script>
     <script src="{{asset('js/drop.js')}}"></script>
-    <script src="http://unpkg.com/turbolinks"></script>
 </body>
 
 </html>
