@@ -33,6 +33,7 @@
         {{$slot}}
     </div>
 
+    <script src="{{asset('js/drop.js')}}"></script>
     <script src="http://unpkg.com/turbolinks"></script>
 </body>
 

@@ -13,6 +13,11 @@
         </h5>
         <p class="text-sm mb-3">
             {{ $tweet->body }}
+            <span>
+                @if ($tweet->image)
+                <img src="{{ $tweet->image }}" class="w-12 rounded-full mt-2" alt="image">
+                @endif
+            </span>
         </p>
 
         <x-like-buttons :tweet="$tweet" />
