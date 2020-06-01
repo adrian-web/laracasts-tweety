@@ -23,6 +23,7 @@
 
             <x-like-buttons :tweet="$tweet" />
         </div>
+        @can('edit', $tweet->user)
         <div class="text-sm mt-3">
             <form method="POST" action="/tweets/{{$tweet->id}}">
                 @csrf
@@ -42,5 +43,6 @@
                 </button>
             </form>
         </div>
+        @endcan
     </div>
 </div>
