@@ -24,6 +24,7 @@ class ProfilesController extends Controller
         // authorization with policy
         // below controller method instead of middleware in routes
         // $this->authorize('edit', $user);
+        
         return view('profiles.edit', compact('user'));
     }
 

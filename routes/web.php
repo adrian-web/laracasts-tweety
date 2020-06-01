@@ -17,9 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function () {
     Route::get('/tweets', 'TweetsController@index')->name('home');
     Route::post('/tweets', 'TweetsController@store');
+    Route::delete('/tweets/{tweet}', 'TweetsController@destroy');
 
     Route::post('/tweets/{tweet}/like', 'TweetLikesController@store');
     Route::delete('/tweets/{tweet}/like', 'TweetLikesController@destroy');
@@ -37,4 +38,3 @@ Route::middleware('auth')->group(function() {
 Route::get('profiles/{user:username}', 'ProfilesController@show')->name('profile');
 
 Auth::routes();
-
