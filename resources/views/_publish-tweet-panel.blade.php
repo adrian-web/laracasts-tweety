@@ -4,7 +4,7 @@
         <div id="drop-zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
 
             <textarea name="body" id="body" class="w-full" placeholder="What's up doc?" required></textarea>
-            <hr class="my-4" id="par-body">
+            <hr class="my-4" id="line-break">
 
             <footer class="flex justify-between items-center">
                 <img src="{{auth()->user()->avatar}}" class="rounded-full mr-2" alt="avatar" width="50" height="50">

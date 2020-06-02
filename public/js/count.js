@@ -1,13 +1,17 @@
 window.onload = function () {
     let body = document.getElementById('body');
     let max = body.maxLength = 255;
-    let par = document.createElement("p");
     let dropZone = document.getElementById('drop-zone');
-    dropZone.insertBefore(par, document.getElementById('par-body'));
-    let num;
+    let paragraph = document.createElement("p");
+    paragraph.classList.add("text-blue-500", "text-sm");
+    let lineBreak = document.getElementById('line-break');
+    dropZone.insertBefore(paragraph, lineBreak);
+    let num = 0;
+    let sum = 0;
     body.addEventListener("keyup", function () {
         num = body.value.length;
-        par.innerHTML = max - num;
+        sum = max - num;
+        paragraph.innerHTML = "Remaining characters: " + sum;
     })
 };
 
