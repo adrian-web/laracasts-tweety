@@ -9,8 +9,12 @@ class FollowsController extends Controller
 {
     public function store(User $user)
     {
-        auth()->user()->toggleFollow($user);
+        current_user()->toggleFollow($user);
 
-        return back();
+        if (current_user()->following($user)) {
+            return back()->with('success', 'You followed ' . $user->name . '!');
+        }
+
+        return back()->with('success', 'You unfollowed ' . $user->name . '!');
     }
 }

@@ -34,7 +34,7 @@ class TweetsController extends Controller
             'image' => $attributes['image']
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Tweet published!');
     }
 
     public function destroy(Tweet $tweet)

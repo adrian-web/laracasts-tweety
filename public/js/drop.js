@@ -1,7 +1,4 @@
 function dropHandler(ev) {
-    console.log('File(s) dropped');
-
-    // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
 
     let dt = new DataTransfer();
@@ -18,8 +15,5 @@ function dropHandler(ev) {
 }
 
 function dragOverHandler(ev) {
-    console.log('File(s) in drop zone');
-
-    // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
 }

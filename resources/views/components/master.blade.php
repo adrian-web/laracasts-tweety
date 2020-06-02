@@ -24,6 +24,7 @@
 
 <body>
     <div id="app">
+        @include('_flash-message')
         <section class="px-8 py-4 mb-6">
             <header class="container mx-auto">
                 <h1>
@@ -34,6 +35,7 @@
         {{$slot}}
     </div>
 
+    <script src="{{asset('js/flash.js')}}"></script>
     <script src="{{asset('js/count.js')}}"></script>
     <script src="{{asset('js/drop.js')}}"></script>
 </body>
