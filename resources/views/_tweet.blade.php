@@ -1,4 +1,6 @@
-<div class="flex p-4 {{ $loop->last ? '' : 'border-b border-gray-400' }}">
+<div class="flex p-4 {{ $loop->last ? '' : 'border-b border-white border-opacity-25' }}
+                    {{$loop->first ? 'rounded-t-lg' : ''}} {{$loop->last ? 'rounded-b-lg' : ''}} "
+    style="background-color: #202020">
     <div class="mr-2 flex-shrink-0">
         <a href="{{ route('profile', $tweet->user) }}">
             <img src="{{$tweet->user->avatar}}" class="w-12 rounded-full mr-2" alt="avatar">

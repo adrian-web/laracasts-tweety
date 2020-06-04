@@ -9,7 +9,7 @@
                 @csrf
                 @method("PATCH")
                 <input type="text" name="notification" id="notification" value="{{$notification->id}}" required hidden>
-                <button type="submit" class="text-blue-500 hover:text-blue-700">Mark as read</button>
+                <button type="submit" class="text-blue-600 hover:text-blue-700">Mark as read</button>
             </form>
 
         </div>
