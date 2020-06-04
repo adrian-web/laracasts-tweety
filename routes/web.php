@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
     
     // invokable controller -> controller that has only one action
     Route::get('/explore', 'ExploreController');
+    Route::get('/notifications', 'UserNotificationsController@show');
+    Route::patch('/notifications', 'UserNotificationsController@update');
 });
 
 Route::get('profiles/{user:username}', 'ProfilesController@show')->name('profile');
