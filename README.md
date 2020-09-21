@@ -30,40 +30,40 @@ To visit tweets page ('/tweets'), you have to be logged in (registration require
 To login/register, look up to top right corner (or center) of a website (at '/' route) or manually visit '/login' or '/register'.
 
 From a main route '/tweets' you can visit specific routes through hyperlinks:
-	- explore all users,
-	- visit and edit your profile,
-	- visit your notifications page,
-	- add/edit/delete your tweets,
-	- follow or unfollow other users,
-	- like or dislike tweets.
+- explore all users,
+- visit and edit your profile,
+- visit your notifications page,
+- add/edit/delete your tweets,
+- follow or unfollow other users,
+- like or dislike tweets.
 
 ## How to setup a Laravel project from github repository
 
 1. Download .zip file from a given github repository.
 2. Unpack .zip file and move terminal working location to the project folder.
 3. Run commands:
-	composer install
-	npm install && npm run dev
+composer install
+npm install && npm run dev
 4. Copy .env.example file and rename it to .env file (projects' main folder).
 5. Generate an app encryption key:
-	php artisan key:generate
-	(it should update an APP_KEY value in you .env file) 
+php artisan key:generate
+(it should update an APP_KEY value in you .env file) 
 6. Create an empty database for a project (recommended coalition: utfmb4_unicode_ci).
 7. Add database information in .env file:
-	DB_HOST
-	DB_PORT
-	DB_DATABASE
-	DB_USERNAME
-	DB_PASSWORD
+DB_HOST
+DB_PORT
+DB_DATABASE
+DB_USERNAME
+DB_PASSWORD
 8. Migrate the database:
-	php artisan migrate
-	(it will create all necessary tables to run an application)
+php artisan migrate
+(it will create all necessary tables to run an application)
 9. Seed the database:
-	php artisan db:seed
-	(located in /database/seeders, it will populate the database with test data)
+php artisan db:seed
+(located in /database/seeders, it will populate the database with test data)
 10. [Optional] How to start Laravel development server:
-	php artisan serve
-	(check created URL with APP_URL value in .env file)
+php artisan serve
+(check created URL with APP_URL value in .env file)
 
 ## License
 
