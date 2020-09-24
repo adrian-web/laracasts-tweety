@@ -9,15 +9,15 @@
 
 ## About a project
 
-Simple Twitter clone system, complete with MySQL database, PHP API and HTML form to add and edit entities (w/o TDD).
+Simple Twitter clone website with Laravel.
 
 Data structure
-1. Tweet entity with at least body and optional avatar fields.
+1. Tweet entity with at least body and optional image fields.
 2. User entity with name with at least name, description and optional avatar fields.
 3. Tweets can be liked, disliked.
 4. Users can be followed (and unfollowed) by other users.
 
-API Endpoints
+Route endpoints
 1. Get a list of all users.
 2. Get relevant posts (show your tweets, tweets liked/disliked by you from users you follow).
 3. Get a profile page for a given user.
@@ -29,7 +29,7 @@ To visit tweets page ('/tweets'), you have to be logged in (registration require
 
 To login/register, look up to top right corner (or center) of a website (at '/' route) or manually visit '/login' or '/register'.
 
-From a main route '/tweets' you can visit specific routes through hyperlinks:
+From a main route '/tweets' you can visit specific routes:
 - explore all users,
 - visit and edit your profile,
 - visit your notifications page,
