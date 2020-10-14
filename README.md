@@ -11,32 +11,6 @@
 
 Simple Twitter clone website with Laravel.
 
-Data structure
-1. Tweet entity with at least body and optional image fields.
-2. User entity with name with at least name, description and optional avatar fields.
-3. Tweets can be liked, disliked.
-4. Users can be followed (and unfollowed) by other users.
-
-Route endpoints
-1. Get a list of all users.
-2. Get relevant posts (show your tweets, tweets liked/disliked by you from users you follow).
-3. Get a profile page for a given user.
-4. Get notifications (when you've been mentioned '@' in a tweet).
-
-## How to navigate a project
-
-To visit tweets page ('/tweets'), you have to be logged in (registration required).
-
-To login/register, look up to top right corner (or center) of a website (at '/' route) or manually visit '/login' or '/register'.
-
-From a main route '/tweets' you can visit specific routes:
-- explore all users,
-- visit and edit your profile,
-- visit your notifications page,
-- add/edit/delete your tweets,
-- follow or unfollow other users,
-- like or dislike tweets.
-
 ## How to setup a Laravel project from github repository
 
 1. Download .zip file from a given github repository.
